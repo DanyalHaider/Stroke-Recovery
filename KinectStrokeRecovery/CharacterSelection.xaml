@@ -1,0 +1,111 @@
+﻿<Window x:Class="KinectStrokeRecovery.CharacterSelection"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:k="http://schemas.microsoft.com/kinect/2013"
+        WindowStartupLocation="CenterScreen"
+        Title="Stroke Recovery With Kinect" Height="1080" Width="1920" ResizeMode="NoResize" Icon="/KinectStrokeRecovery;component/Images/kinectIcon.png">
+    <Grid>
+
+        <Grid.Background>
+
+            <ImageBrush ImageSource="/KinectStrokeRecovery;component/Images/BlurBackGround2.jpg"></ImageBrush>
+
+        </Grid.Background>
+        <k:KinectSensorChooserUI HorizontalAlignment="Center" VerticalAlignment="Top" Name="sensorChooserUi" />
+        <k:KinectUserViewer VerticalAlignment="Top" HorizontalAlignment="Center" k:KinectRegion.KinectRegion="{Binding ElementName=kinectRegion}" Height="100" UserColoringMode="Manual" />
+        <k:KinectRegion Name="kinectRegion">
+            <Grid>
+                <k:KinectTileButton Content="Home" VerticalAlignment="Top" HorizontalAlignment="Left" Height="75" Width="166" Margin="373,6,0,0" Click="KinectTileButton_Click_6">
+                    <k:KinectTileButton.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1" />
+                            <GradientStop Color="#F778EB0C" Offset="0.827" />
+                            <GradientStop Color="#F7F3E414" Offset="0.147" />
+                        </RadialGradientBrush>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <k:KinectTileButton Content="Video" VerticalAlignment="Top" HorizontalAlignment="Right" Height="75" Width="166" Margin="0,6,1030,0">
+                    <k:KinectTileButton.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1" />
+                            <GradientStop Color="#F778EB0C" Offset="0.827" />
+                            <GradientStop Color="#F7F3E414" Offset="0.147" />
+                        </RadialGradientBrush>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <k:KinectTileButton Content="Image" VerticalAlignment="Top" HorizontalAlignment="Left" Height="75" Width="166" Margin="543,6,0,0">
+                    <k:KinectTileButton.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1" />
+                            <GradientStop Color="#F778EB0C" Offset="0.827" />
+                            <GradientStop Color="#F7F3E414" Offset="0.147" />
+                        </RadialGradientBrush>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <k:KinectTileButton Content="Setting" VerticalAlignment="Top" HorizontalAlignment="Left" Height="75" Width="166" Margin="884,6,0,0">
+                    <k:KinectTileButton.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1" />
+                            <GradientStop Color="#F778EB0C" Offset="0.827" />
+                            <GradientStop Color="#F7F3E414" Offset="0.147" />
+                        </RadialGradientBrush>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <k:KinectTileButton Content="Help" VerticalAlignment="Top" HorizontalAlignment="Left" Height="75" Width="166" Margin="1047,6,0,0" Click="HelpKinectTileButton_Click" >
+                    <k:KinectTileButton.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1" />
+                            <GradientStop Color="#F778EB0C" Offset="0.827" />
+                            <GradientStop Color="#F7F3E414" Offset="0.147" />
+                        </RadialGradientBrush>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <k:KinectTileButton Content="About Us" VerticalAlignment="Top" HorizontalAlignment="Right" Height="75" Width="166" Margin="0,6,527,0" Click="KinectTileButton_Click_3">
+                    <k:KinectTileButton.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1" />
+                            <GradientStop Color="#F778EB0C" Offset="0.827" />
+                            <GradientStop Color="#F7F3E414" Offset="0.147" />
+                        </RadialGradientBrush>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+
+                <Label Content="Select Charater" Height="64" HorizontalAlignment="Left" Margin="654,157,0,0" Name="label1" VerticalAlignment="Top" Width="288" FontFamily="Times New Roman" FontSize="40" FontWeight="Bold" />
+
+                <k:KinectTileButton HorizontalAlignment="Left" Margin="281,244,0,169" Height="623" Width="298"  Click="KinectTileButton_Click_1" >
+                    <k:KinectTileButton.Template>
+                        <ControlTemplate TargetType="k:KinectTileButton">
+                            <Image Source="{TemplateBinding Content}" />
+                        </ControlTemplate>
+                        
+                    </k:KinectTileButton.Template>
+                    <k:KinectTileButton.Content>
+                        <BitmapImage UriSource="C:\Users\Danyal Haider\Documents\Visual Studio 2010\Projects\KinectStrokeRecovery\KinectStrokeRecovery\Images\male.png"></BitmapImage>
+                    </k:KinectTileButton.Content>
+                </k:KinectTileButton>
+                <k:KinectTileButton HorizontalAlignment="Left" Margin="932,249,0,0" VerticalAlignment="Top" Height="623" Width="298"  Click="KinectTileButton_Click_2" >
+                    <k:KinectTileButton.Template>
+                        <ControlTemplate TargetType="k:KinectTileButton">
+                            <Image Source="{TemplateBinding Content}" />
+                        </ControlTemplate>
+
+                    </k:KinectTileButton.Template>
+                    <k:KinectTileButton.Content>
+                        <BitmapImage UriSource="C:\Users\Danyal Haider\Documents\Visual Studio 2010\Projects\KinectStrokeRecovery\KinectStrokeRecovery\Images\female.png"></BitmapImage>
+                    </k:KinectTileButton.Content>
+                </k:KinectTileButton>
+                <k:KinectTileButton Content="Logout" FontWeight="Bold" Height="82" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="174" Click="KinectTileButton_Click">
+                    <k:KinectTileButton.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1" />
+                            <GradientStop Color="#F778EB0C" Offset="0.827" />
+                            <GradientStop Color="#F7F3E414" Offset="0.147" />
+                        </RadialGradientBrush>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <!--<Image Height="754" HorizontalAlignment="Left" Margin="276,79,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="1190" Source="/KinectStrokeRecovery;component/Images/hero1.png" />-->
+            </Grid>
+        </k:KinectRegion>
+
+    </Grid>
+</Window>

@@ -1,0 +1,32 @@
+﻿<Window x:Class="KinectStrokeRecovery.Game"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:k="http://schemas.microsoft.com/kinect/2013"
+        WindowStartupLocation="CenterScreen"
+        Title="Game"  Height="1080" Width="1920" ResizeMode="NoResize" Icon="/KinectStrokeRecovery;component/Images/kinectIcon.png">
+    <Grid>
+
+        <Grid.Background>
+
+            <ImageBrush ImageSource="/KinectStrokeRecovery;component/Images/BlurBackGround2.jpg"></ImageBrush>
+
+        </Grid.Background>
+        <k:KinectSensorChooserUI HorizontalAlignment="Center" VerticalAlignment="Top" Name="sensorChooserUi" />
+        <k:KinectUserViewer VerticalAlignment="Top" HorizontalAlignment="Center" k:KinectRegion.KinectRegion="{Binding ElementName=kinectRegion}" Height="100" UserColoringMode="Manual" />
+        <k:KinectRegion Name="kinectRegion">
+            <Grid>
+                <k:KinectTileButton Content="About Us" VerticalAlignment="Top" HorizontalAlignment="Right" Height="75" Width="166" Margin="0,11,1210,0">
+                    <k:KinectTileButton.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1" />
+                            <GradientStop Color="#F778EB0C" Offset="0.827" />
+                            <GradientStop Color="#F7F3E414" Offset="0.147" />
+                        </RadialGradientBrush>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <!--<Image Height="754" HorizontalAlignment="Left" Margin="276,79,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="1190" Source="/KinectStrokeRecovery;component/Images/hero1.png" />-->
+            </Grid>
+        </k:KinectRegion>
+
+    </Grid>
+</Window>

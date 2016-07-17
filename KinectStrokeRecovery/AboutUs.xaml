@@ -1,0 +1,82 @@
+﻿<Window x:Class="KinectStrokeRecovery.AboutUs"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:k="http://schemas.microsoft.com/kinect/2013"
+        Title="AboutUs" Height="1080" Width="1920" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/KinectStrokeRecovery;component/Images/kinectIcon.png">
+    <Grid>
+        <Grid.Background>
+
+            <ImageBrush ImageSource="/KinectStrokeRecovery;component/Images/BlurBackGround2.jpg"></ImageBrush>
+
+        </Grid.Background>
+        <k:KinectSensorChooserUI HorizontalAlignment="Center" VerticalAlignment="Top" Name="sensorChooserUi" />
+        <k:KinectUserViewer VerticalAlignment="Center" HorizontalAlignment="Right" k:KinectRegion.KinectRegion="{Binding ElementName=kinectRegion}" Height="459" UserColoringMode="Manual" Margin="0,195,58,387" Width="486" />
+        <k:KinectRegion Name="kinectRegion">
+            <Grid>
+                <k:KinectTileButton Content="Home" VerticalAlignment="Top" HorizontalAlignment="Left" Height="75" Width="166" Margin="409,6,0,0" Click="KinectTileButton_Click_1">
+                    <k:KinectTileButton.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1" />
+                            <GradientStop Color="#F778EB0C" Offset="0.827" />
+                            <GradientStop Color="#F7F3E414" Offset="0.147" />
+                        </RadialGradientBrush>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <k:KinectTileButton Content="Video" VerticalAlignment="Top" HorizontalAlignment="Left" Height="75" Width="166" Margin="730,6,0,0">
+                    <k:KinectTileButton.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1" />
+                            <GradientStop Color="#F778EB0C" Offset="0.827" />
+                            <GradientStop Color="#F7F3E414" Offset="0.147" />
+                        </RadialGradientBrush>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <k:KinectTileButton Content="Image" VerticalAlignment="Top" HorizontalAlignment="Left" Height="75" Width="166" Margin="569,6,0,0">
+                    <k:KinectTileButton.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1" />
+                            <GradientStop Color="#F778EB0C" Offset="0.827" />
+                            <GradientStop Color="#F7F3E414" Offset="0.147" />
+                        </RadialGradientBrush>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <k:KinectTileButton Content="Setting" VerticalAlignment="Top" HorizontalAlignment="Left" Height="75" Width="166" Margin="892,6,0,0">
+                    <k:KinectTileButton.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1" />
+                            <GradientStop Color="#F778EB0C" Offset="0.827" />
+                            <GradientStop Color="#F7F3E414" Offset="0.147" />
+                        </RadialGradientBrush>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <k:KinectTileButton Content="Help" VerticalAlignment="Top" HorizontalAlignment="Left" Height="75" Width="166" Margin="1054,6,0,0" Click="KinectTileButton_Click" >
+                    <k:KinectTileButton.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1" />
+                            <GradientStop Color="#F778EB0C" Offset="0.827" />
+                            <GradientStop Color="#F7F3E414" Offset="0.147" />
+                        </RadialGradientBrush>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <k:KinectTileButton Content="About Us" VerticalAlignment="Top" HorizontalAlignment="Right" Height="75" Width="166" Margin="0,6,515,0" Click="KinectTileButton_Click_2">
+                    <k:KinectTileButton.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1" />
+                            <GradientStop Color="#F778EB0C" Offset="0.827" />
+                            <GradientStop Color="#F7F3E414" Offset="0.147" />
+                        </RadialGradientBrush>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <Canvas Height="590" HorizontalAlignment="Left" Margin="384,204,0,0" Name="canvas1" Background="#FFC1DB3B" VerticalAlignment="Top" Width="1096">
+                    <Label Canvas.Left="239" Canvas.Top="22" Content="Steps to Keep in mind before Session" Height="49" Name="label1" Width="645" FontSize="32" FontWeight="Bold" FontFamily="Arial" />
+                    <Label Canvas.Left="40" Canvas.Top="140" Content="Danyal Haider" Height="47" Name="label2" FontSize="22" FontFamily="Arial" FontWeight="Bold" Width="682" />
+                    <Label Canvas.Left="39" Canvas.Top="184" Content="Email:    dhaider123@yahoo.com" Height="38" Name="label3" FontFamily="Arial" FontSize="22" FontWeight="Bold" Width="1006" />
+                    <Label Canvas.Left="40" Canvas.Top="237" Content="Phone# :  +923335930205" FontFamily="Arial" FontSize="22" FontWeight="Bold" Height="56" Name="label4" Width="969" />
+                    <Label Canvas.Left="39" Canvas.Top="350" Content="M Ahsan Arshad" FontFamily="Arial" FontSize="22" FontWeight="Bold" Height="47" Name="label5" Width="981" />
+                    <Label Canvas.Left="39" Canvas.Top="403" Content="Email:    ahsan@yahoo.com" FontFamily="Arial" FontSize="22" FontWeight="Bold" Height="47" Name="label7" Width="482" />
+                    <Label Canvas.Left="39" Canvas.Top="447" Content="Phone# :  +923315081180" FontFamily="Arial" FontSize="22" FontWeight="Bold" Height="71" Name="label8" Width="1006" />
+                </Canvas>
+            </Grid>
+        </k:KinectRegion>
+    </Grid>
+</Window>

@@ -1,0 +1,113 @@
+﻿<Window x:Class="KinectStrokeRecovery.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:k="http://schemas.microsoft.com/kinect/2013"
+        WindowStartupLocation="CenterScreen"
+        Title="Stroke Recovery with Kinect" Height="1080" Width="1920" ResizeMode="NoResize" Icon="/KinectStrokeRecovery;component/Images/kinectIcon.png">
+
+    <Grid >
+        <Grid.Background>
+
+            <ImageBrush ImageSource="C:\\Users\\Danyal Haider\\documents\\visual studio 2010\\Projects\\KinectStrokeRecovery\\KinectStrokeRecovery\\images\\BlurBackGround2.jpg"></ImageBrush>
+
+        </Grid.Background>
+        <k:KinectSensorChooserUI HorizontalAlignment="Center" VerticalAlignment="Top" Name="sensorChooserUi" />
+        <k:KinectUserViewer VerticalAlignment="Center" HorizontalAlignment="Right" k:KinectRegion.KinectRegion="{Binding ElementName=kinectRegion}" Height="459" UserColoringMode="Manual" Margin="0,195,58,387" Width="486" />
+        <k:KinectRegion Name="kinectRegion">
+            <Grid>
+                <TextBlock Height="151" Margin="335,141,399,0" Name="textBlockHeading" VerticalAlignment="Top" FontSize="28" FontStyle="Italic"  Padding="5" FontFamily="Times New Roman" FontWeight="Bold">
+            * Please login here to view the features of this Application.If you are new on this Application then <LineBreak /><!--line break-->
+
+
+            </TextBlock>
+            <TextBlock Margin="350,224,746,757" FontSize="28" FontFamily="Times New Roman" FontWeight="Bold" FontStyle="Italic">please click on</TextBlock>
+                <k:KinectTileButton Content="Register" Click="RegistButtonOnClick" HorizontalAlignment="Center" VerticalAlignment="Center" Height="92"  FontWeight="Bold" Margin="596,200,1050,749" Width="252">
+                    <k:KinectTileButton.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1" />
+                            <GradientStop Color="#F778EB0C" Offset="0.827" />
+                            <GradientStop Color="#F7F3E414" Offset="0.147" />
+                        </RadialGradientBrush>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+            <TextBlock Height="54" HorizontalAlignment="Left" Margin="537,514,0,0" Name="textBlock1" Text="User Name" Focusable="True" VerticalAlignment="Top" Width="188" FontSize="40" FontFamily="Times New Roman" FontWeight="Bold" TextAlignment="Left" Foreground="Gray" />
+            <TextBlock Height="81" HorizontalAlignment="Left" Margin="545,660,0,0" Name="textBlock2" Text="Password" VerticalAlignment="Top" Width="223" FontSize="40" FontFamily="Times New Roman" FontWeight="Bold" Foreground="Gray" />
+            <TextBox Height="63" HorizontalAlignment="Left" Margin="800,514,0,0" Name="textBoxEmail" VerticalAlignment="Top" Width="288" FontSize="26" />
+            <PasswordBox Height="66" HorizontalAlignment="Left" Margin="800,660,0,0" Name="passwordBox1" VerticalAlignment="Top" Width="288" FontSize="26" />
+            <TextBlock Height="102" HorizontalAlignment="Left" x:Name ="errormessage" VerticalAlignment="Top" Width="523" Margin="1135,496,0,0"  OpacityMask="Crimson" Foreground="#FFE5572C" FontSize="24" />
+                <k:KinectTileButton Content="Login" Click="LoginButtonOnClick" VerticalAlignment="Top" Height="108" Margin="616,784,1062,0" FontWeight="Bold">
+                    <k:KinectTileButton.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1" />
+                            <GradientStop Color="#F778EB0C" Offset="0.827" />
+                            <GradientStop Color="#F7F3E414" Offset="0.147" />
+                        </RadialGradientBrush>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <k:KinectTileButton FontWeight="Bold"  HorizontalAlignment="Center" Content="About Us" Margin="1216,3,516,963" VerticalAlignment="Center" Height="75" Width="166" Click="KinectTileButton_Click_3">
+                    <k:KinectTileButton.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1" />
+                            <GradientStop Color="#F778EB0C" Offset="0.827" />
+                            <GradientStop Color="#F7F3E414" Offset="0.147" />
+                        </RadialGradientBrush>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <k:KinectTileButton FontWeight="Bold"  HorizontalAlignment="Center" Content="Help" Margin="1052,3,680,963" VerticalAlignment="Center" Height="75" Width="166" Click="KinectTileButton_Click_1">
+                    <k:KinectTileButton.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1" />
+                            <GradientStop Color="#F778EB0C" Offset="0.827" />
+                            <GradientStop Color="#F7F3E414" Offset="0.147" />
+                        </RadialGradientBrush>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <k:KinectTileButton  FontWeight="Bold"  HorizontalAlignment="Center" Content="Setting" Margin="887,3,845,963" VerticalAlignment="Center" Height="75" Width="166" >
+                    <k:KinectTileButton.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1" />
+                            <GradientStop Color="#F778EB0C" Offset="0.827" />
+                            <GradientStop Color="#F7F3E414" Offset="0.147" />
+                        </RadialGradientBrush>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <k:KinectTileButton  FontWeight="Bold"  HorizontalAlignment="Center" Content="Image" Margin="559,3,1173,963" VerticalAlignment="Center" Height="75" Width="166" >
+                    <k:KinectTileButton.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1" />
+                            <GradientStop Color="#F778EB0C" Offset="0.827" />
+                            <GradientStop Color="#F7F3E414" Offset="0.147" />
+                        </RadialGradientBrush>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <k:KinectTileButton  FontWeight="Bold"  HorizontalAlignment="Center" Content="Video" Margin="722,3,1010,963" VerticalAlignment="Center" Height="75" Width="166" >
+                    <k:KinectTileButton.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1" />
+                            <GradientStop Color="#F778EB0C" Offset="0.827" />
+                            <GradientStop Color="#F7F3E414" Offset="0.147" />
+                        </RadialGradientBrush>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <k:KinectTileButton  FontWeight="Bold"  HorizontalAlignment="Center" Content="Home" Margin="396,3,1336,963" VerticalAlignment="Center" Height="75" Width="166" Click="KinectTileButton_Click_2">
+                    <k:KinectTileButton.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1" />
+                            <GradientStop Color="#F778EB0C" Offset="0.827" />
+                            <GradientStop Color="#F7F3E414" Offset="0.147" />
+                        </RadialGradientBrush>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+                <k:KinectTileButton  FontWeight="Bold" Height="108" Content="Cancel" Margin="916,784,762,0" VerticalAlignment="Top" Click="KinectTileButton_Click" >
+                    <k:KinectTileButton.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1" />
+                            <GradientStop Color="#F778EB0C" Offset="0.827" />
+                            <GradientStop Color="#F7F3E414" Offset="0.147" />
+                        </RadialGradientBrush>
+                    </k:KinectTileButton.Background>
+                </k:KinectTileButton>
+            </Grid>
+        </k:KinectRegion>
+    </Grid>
+</Window>
